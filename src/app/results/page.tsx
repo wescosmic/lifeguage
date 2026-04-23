@@ -8,7 +8,7 @@ import {
   Home, Car, GraduationCap, Plane, Briefcase, CreditCard,
   Brain, Lightbulb, FileText, Check, CheckCircle, X,
   ExternalLink, Phone, Globe, ArrowRight, ChevronRight, Star,
-  MessageSquare
+  MessageSquare, Target, Sparkles, Clock, ChevronLeft
 } from 'lucide-react';
 
 interface LoanProductResult {
@@ -407,6 +407,82 @@ export default function ResultsPage() {
               </li>
             ))}
           </ul>
+        </motion.div>
+
+        {/* Upsell Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.75 }}
+          className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl border border-indigo-100 p-6"
+        >
+          <div className="flex items-start gap-3 mb-5">
+            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center shrink-0">
+              <Sparkles className="w-5 h-5 text-indigo-600" />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">Go Further with Lifeguage Plus</h3>
+              <p className="text-sm text-slate-600">Unlock powerful tools to take control of your financial future.</p>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            {/* Boost My Score */}
+            <Link
+              href="/results/boost"
+              className="flex items-start gap-4 bg-white rounded-xl border border-slate-200 p-4 hover:shadow-sm transition-shadow group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0">
+                <Target className="w-5 h-5" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between">
+                  <h4 className="font-semibold text-slate-900 text-sm">Boost My Score — Action Plan</h4>
+                  <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full group-hover:bg-emerald-100 transition-colors">Free</span>
+                </div>
+                <p className="text-xs text-slate-500 mt-0.5">Personalised steps based on your profile to increase your score by 8–15 points. Includes side hustle ideas to grow income.</p>
+              </div>
+              <ChevronRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" />
+            </Link>
+
+            {/* Pre-Approval Letter */}
+            <Link
+              href="/results/preapproval"
+              className="w-full flex items-start gap-4 bg-white rounded-xl border border-slate-200 p-4 hover:shadow-sm transition-shadow group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
+                <FileText className="w-5 h-5" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between">
+                  <h4 className="font-semibold text-slate-900 text-sm">Pre-Approval Letter (PDF)</h4>
+                  <span className="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full group-hover:bg-amber-100 transition-colors">$9.99</span>
+                </div>
+                <p className="text-xs text-slate-500 mt-0.5">Printable Lifeguage Pre-Qualification Certificate with your score, loan range, and profile. Present it at any TT lender.</p>
+              </div>
+              <ChevronRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" />
+            </Link>
+
+            {/* Free Document Review - Limited Time */}
+            <div className="flex items-start gap-4 bg-amber-50 border border-amber-200 rounded-xl p-4">
+              <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 shrink-0">
+                <Clock className="w-5 h-5" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between">
+                  <h4 className="font-semibold text-slate-900 text-sm">Free Document Review — Limited Time</h4>
+                  <span className="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full">Free Now</span>
+                </div>
+                <p className="text-xs text-slate-600 mt-0.5">Upload your payslips or bank statement and get an instant breakdown of what lenders will see — and what to fix before applying.</p>
+                <Link
+                  href="/results/review"
+                  className="inline-flex items-center gap-1 mt-2 text-xs font-semibold text-amber-700 hover:text-amber-800 transition-colors"
+                >
+                  Upload Documents <ChevronRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Actions */}

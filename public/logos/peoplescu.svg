@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <rect width="80" height="80" rx="12" fill="#1B459C"/>
+  <text x="40" y="26" font-family="Arial,sans-serif" font-weight="bold" font-size="10" fill="white" text-anchor="middle">PEOPLE'S</text>
+  <text x="40" y="40" font-family="Arial,sans-serif" font-weight="bold" font-size="10" fill="#F4A614" text-anchor="middle">CREDIT UNION</text>
+  <rect x="20" y="50" width="40" height="2" rx="1" fill="white" opacity="0.3"/>
+  <text x="40" y="66" font-family="Arial,sans-serif" font-size="8" fill="white" opacity="0.7" text-anchor="middle">Serving TT Since 1949</text>
+</svg>

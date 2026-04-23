@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <rect width="80" height="80" rx="12" fill="#003F87"/>
+  <text x="40" y="22" font-family="Arial,sans-serif" font-weight="bold" font-size="14" fill="white" text-anchor="middle">GATE</text>
+  <rect x="16" y="30" width="48" height="2" rx="1" fill="white" opacity="0.4"/>
+  <text x="40" y="46" font-family="Arial,sans-serif" font-size="8" fill="white" opacity="0.85" text-anchor="middle">Government Assistance</text>
+  <text x="40" y="58" font-family="Arial,sans-serif" font-size="8" fill="white" opacity="0.85" text-anchor="middle">for Tuition Expenses</text>
+</svg>

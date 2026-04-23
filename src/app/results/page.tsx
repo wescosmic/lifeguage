@@ -46,37 +46,37 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   CreditCard: <CreditCard className="w-6 h-6 text-slate-700" />,
 };
 
-const PROVIDERS: Record<string, Array<{ name: string; offer: string; rate: string; phone: string; website: string }>> = {
+const PROVIDERS: Record<string, Array<{ name: string; offer: string; rate: string; phone: string; website: string; logo: string }>> = {
   Home: [
-    { name: 'First Citizens Bank', offer: 'Home loans & mortgages', rate: '6.5–8%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt' },
-    { name: 'Republic Bank', offer: 'Residential mortgages', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com' },
-    { name: 'Trinidad & Tobago Mortgage Finance', offer: 'Government-backed home loans', rate: '6–7.5%', phone: '+1 (868) 627-6237', website: 'ttmf.com' },
-    { name: 'JMMB Bank', offer: 'Home improvement & purchase loans', rate: '8–10%', phone: '+1 (868) 627-9100', website: 'jmmb.com' },
+    { name: 'First Citizens Bank', offer: 'Home loans & mortgages', rate: '6.5–8%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
+    { name: 'Republic Bank', offer: 'Residential mortgages', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com' },
+    { name: 'Trinidad & Tobago Mortgage Finance', offer: 'Government-backed home loans', rate: '6–7.5%', phone: '+1 (868) 627-6237', website: 'ttmf.com', logo: 'https://logo.clearbit.com/ttmf.com' },
+    { name: 'JMMB Bank', offer: 'Home improvement & purchase loans', rate: '8–10%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
   ],
   Car: [
-    { name: 'Republic Bank', offer: 'New & used car loans', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com' },
-    { name: 'First Citizens Bank', offer: 'Auto financing', rate: '7.5–9.5%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt' },
-    { name: 'Scotiabank TT', offer: 'Vehicle loans', rate: '6.5–8.5%', phone: '+1 (868) 627-9100', website: 'scotiabank.com/tt' },
+    { name: 'Republic Bank', offer: 'New & used car loans', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com' },
+    { name: 'First Citizens Bank', offer: 'Auto financing', rate: '7.5–9.5%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
+    { name: 'Scotiabank TT', offer: 'Vehicle loans', rate: '6.5–8.5%', phone: '+1 (868) 627-9100', website: 'scotiabank.com/tt', logo: 'https://logo.clearbit.com/scotiabank.com' },
   ],
   Education: [
-    { name: 'First Citizens Bank', offer: 'Education loans for locals', rate: '5–7%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt' },
-    { name: 'Government GATE Programme', offer: 'Government Assistance for Tuition Expenses', rate: '3–5%', phone: '+1 (868) 627-0094', website: 'gate.gov.tt' },
-    { name: 'Caribbean Union Bank', offer: 'Student loans & education financing', rate: '6–8%', phone: '+1 (868) 623-6441', website: 'caribbeanunionbank.com' },
+    { name: 'First Citizens Bank', offer: 'Education loans for locals', rate: '5–7%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
+    { name: 'Government GATE Programme', offer: 'Government Assistance for Tuition Expenses', rate: '3–5%', phone: '+1 (868) 627-0094', website: 'gate.gov.tt', logo: 'https://logo.clearbit.com/gate.gov.tt' },
+    { name: 'Caribbean Union Bank', offer: 'Student loans & education financing', rate: '6–8%', phone: '+1 (868) 623-6441', website: 'caribbeanunionbank.com', logo: 'https://logo.clearbit.com/caribbeanunionbank.com' },
   ],
   Vacation: [
-    { name: 'First Citizens Bank', offer: 'Personal loans for travel', rate: '8–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt' },
-    { name: 'JMMB Bank', offer: 'Travel financing personal loans', rate: '9–12%', phone: '+1 (868) 627-9100', website: 'jmmb.com' },
-    { name: 'Republic Bank', offer: 'Personal loans for leisure', rate: '8–11%', phone: '+1 (868) 623-7219', website: 'republictt.com' },
+    { name: 'First Citizens Bank', offer: 'Personal loans for travel', rate: '8–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
+    { name: 'JMMB Bank', offer: 'Travel financing personal loans', rate: '9–12%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
+    { name: 'Republic Bank', offer: 'Personal loans for leisure', rate: '8–11%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com' },
   ],
   Business: [
-    { name: 'JMMB Business Banking', offer: 'SME loans, working capital, equipment financing', rate: '8–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com' },
-    { name: 'First Citizens SME Division', offer: 'Small business loans & start-up financing', rate: '7–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt' },
-    { name: 'Caribbean Development Bank (CDB)', offer: 'Development finance for businesses & NGOs', rate: '5–9%', phone: '+1 (246) 539-1600', website: 'caribank.org' },
+    { name: 'JMMB Business Banking', offer: 'SME loans, working capital, equipment financing', rate: '8–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
+    { name: 'First Citizens SME Division', offer: 'Small business loans & start-up financing', rate: '7–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
+    { name: 'Caribbean Development Bank (CDB)', offer: 'Development finance for businesses & NGOs', rate: '5–9%', phone: '+1 (246) 539-1600', website: 'caribank.org', logo: 'https://logo.clearbit.com/caribank.org' },
   ],
   Personal: [
-    { name: 'JMMB Bank', offer: 'Personal loans & credit lines', rate: '10–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com' },
-    { name: 'Metro Certified Investments', offer: 'Quick personal loans', rate: '9–13%', phone: '+1 (868) 627-8900', website: 'metro.tt' },
-    { name: 'First Citizens Bank', offer: 'Personal loan products', rate: '8–14%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt' },
+    { name: 'JMMB Bank', offer: 'Personal loans & credit lines', rate: '10–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
+    { name: 'Metro Certified Investments', offer: 'Quick personal loans', rate: '9–13%', phone: '+1 (868) 627-8900', website: 'metro.tt', logo: 'https://logo.clearbit.com/metro.tt' },
+    { name: 'First Citizens Bank', offer: 'Personal loan products', rate: '8–14%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
   ],
 };
 
@@ -126,11 +126,21 @@ function ProviderModal({ productId, productName, onClose }: { productId: string;
           ) : (
             providerList.map((p, i) => (
               <div key={i} className="border border-slate-200 rounded-xl p-4 hover:shadow-sm transition-shadow">
-                <div className="flex items-start justify-between mb-2">
-                  <h4 className="font-semibold text-slate-900 text-sm">{p.name}</h4>
-                  <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full">{p.rate}</span>
+                <div className="flex items-start gap-3 mb-2">
+                  <img
+                    src={p.logo}
+                    alt={`${p.name} logo`}
+                    className="w-10 h-10 rounded-lg object-contain bg-white border border-slate-100 shrink-0"
+                    onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between mb-0.5">
+                      <h4 className="font-semibold text-slate-900 text-sm">{p.name}</h4>
+                      <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full shrink-0 ml-2">{p.rate}</span>
+                    </div>
+                    <p className="text-xs text-slate-600">{p.offer}</p>
+                  </div>
                 </div>
-                <p className="text-xs text-slate-600 mb-3">{p.offer}</p>
                 <div className="flex flex-wrap gap-3">
                   <a href={`tel:${p.phone}`} className="flex items-center gap-1 text-xs text-slate-500 hover:text-indigo-600 transition-colors">
                     <Phone className="w-3 h-3" /> {p.phone}

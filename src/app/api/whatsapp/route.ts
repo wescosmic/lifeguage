@@ -90,11 +90,18 @@ function mapExpensesToNumber(expenses: string): number {
 }
 
 export async function GET(): Promise<NextResponse> {
+  if (!process.env.MONGODB_URI) {
+    return xmlResponse('Lifeguage WhatsApp endpoint is active. Server not configured yet.');
+  }
   return xmlResponse('Lifeguage WhatsApp endpoint is active. Send a message to start!');
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
+    if (!process.env.MONGODB_URI) {
+      return xmlResponse('Server not configured. Please set MONGODB_URI environment variable.');
+    }
+
     const formData = await request.formData();
     const from = formData.get('From') as string;
     const body = formData.get('Body') as string;

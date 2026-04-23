@@ -227,18 +227,22 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Your Name</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                Your Name <span className="text-red-500">*</span>
+              </label>
               <input
                 type="text"
                 value={state.name}
                 onChange={(e) => dispatch({ type: 'SET_NAME', payload: e.target.value })}
                 placeholder="Enter your name"
-                className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+                className="w-full px-4 py-3.5 border-2 border-slate-300 rounded-xl text-slate-900 text-base font-medium placeholder-slate-400 bg-white focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition shadow-sm"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Age Range</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                Age Range <span className="text-red-500">*</span>
+              </label>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
                 {['18-25', '26-35', '36-50', '51-65', '65+'].map((age) => (
                   <button
@@ -258,7 +262,9 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Employment Type</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                Employment Type <span className="text-red-500">*</span>
+              </label>
               <div className="grid grid-cols-2 gap-2">
                 {['Salaried', 'Self-employed', 'Freelance', 'Informal'].map((type) => (
                   <button
@@ -288,7 +294,7 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
                 Monthly Income: <span className="text-indigo-600 font-bold">{formatCurrency(state.monthlyIncome)}</span>
               </label>
               <input
@@ -298,9 +304,9 @@ export default function WizardPage() {
                 step="500"
                 value={state.monthlyIncome}
                 onChange={(e) => dispatch({ type: 'SET_MONTHLY_INCOME', payload: Number(e.target.value) })}
-                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
               />
-              <div className="flex justify-between text-xs text-slate-500 mt-1">
+              <div className="flex justify-between text-xs text-slate-600 font-medium mt-1">
                 <span>$1K</span>
                 <span>$20K</span>
               </div>
@@ -327,7 +333,9 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Do you have additional income sources?</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                Do you have additional income sources? <span className="text-red-500">*</span>
+              </label>
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -382,7 +390,7 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
                 Monthly Obligations: <span className="text-indigo-600 font-bold">{formatCurrency(state.monthlyObligations)}</span>
               </label>
               <input
@@ -392,16 +400,18 @@ export default function WizardPage() {
                 step="100"
                 value={state.monthlyObligations}
                 onChange={(e) => dispatch({ type: 'SET_MONTHLY_OBLIGATIONS', payload: Number(e.target.value) })}
-                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
               />
-              <div className="flex justify-between text-xs text-slate-500 mt-1">
+              <div className="flex justify-between text-xs text-slate-600 font-medium mt-1">
                 <span>$0</span>
                 <span>$10K</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Number of Dependents</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                Number of Dependents <span className="text-red-500">*</span>
+              </label>
               <div className="grid grid-cols-6 gap-2">
                 {[0, 1, 2, 3, 4, 5].map((count) => (
                   <button
@@ -421,7 +431,9 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Do you have major loan payments existing?</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                Do you have major loan payments existing? <span className="text-red-500">*</span>
+              </label>
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -459,7 +471,7 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
                 Saving Habit: <span className="text-indigo-600 font-bold">{state.savingHabit}/5</span>
               </label>
               <div className="grid grid-cols-5 gap-2">
@@ -478,14 +490,16 @@ export default function WizardPage() {
                   </button>
                 ))}
               </div>
-              <div className="flex justify-between text-xs text-slate-500 mt-1">
+              <div className="flex justify-between text-xs text-slate-600 font-medium mt-1">
                 <span>Poor</span>
                 <span>Excellent</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Have you ever borrowed before?</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                Have you ever borrowed before? <span className="text-red-500">*</span>
+              </label>
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -513,7 +527,9 @@ export default function WizardPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">What is the loan for?</label>
+              <label className="block text-sm font-semibold text-slate-900 mb-2">
+                What is the loan for? <span className="text-red-500">*</span>
+              </label>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                 {['Home', 'Education', 'Business', 'Emergency', 'Other'].map((purpose) => (
                   <button

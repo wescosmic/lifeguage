@@ -46,37 +46,37 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   CreditCard: <CreditCard className="w-6 h-6 text-slate-700" />,
 };
 
-const PROVIDERS: Record<string, Array<{ name: string; offer: string; rate: string; phone: string; website: string; logo: string }>> = {
+const PROVIDERS: Record<string, Array<{ name: string; offer: string; rate: string; phone: string; website: string; logo: string; whatsapp: string; message: string }>> = {
   Home: [
-    { name: 'First Citizens Bank', offer: 'Home loans & mortgages', rate: '6.5–8%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
-    { name: 'Republic Bank', offer: 'Residential mortgages', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com' },
-    { name: 'Trinidad & Tobago Mortgage Finance', offer: 'Government-backed home loans', rate: '6–7.5%', phone: '+1 (868) 627-6237', website: 'ttmf.com', logo: 'https://logo.clearbit.com/ttmf.com' },
-    { name: 'JMMB Bank', offer: 'Home improvement & purchase loans', rate: '8–10%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
+    { name: 'First Citizens Bank', offer: 'Home loans & mortgages', rate: '6.5–8%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt', whatsapp: '18686243244', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a home loan. I\'d like to know more about your mortgage options. My score: ' },
+    { name: 'Republic Bank', offer: 'Residential mortgages', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com', whatsapp: '18686237219', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a home loan. I\'d like to know more about your residential mortgage options. My score: ' },
+    { name: 'Trinidad & Tobago Mortgage Finance', offer: 'Government-backed home loans', rate: '6–7.5%', phone: '+1 (868) 627-6237', website: 'ttmf.com', logo: 'https://logo.clearbit.com/ttmf.com', whatsapp: '18686276237', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a home loan. I\'d like to learn about your government-backed home loan options. My score: ' },
+    { name: 'JMMB Bank', offer: 'Home improvement & purchase loans', rate: '8–10%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com', whatsapp: '18686279100', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a home loan. I\'d like to know more about your home loan products. My score: ' },
   ],
   Car: [
-    { name: 'Republic Bank', offer: 'New & used car loans', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com' },
-    { name: 'First Citizens Bank', offer: 'Auto financing', rate: '7.5–9.5%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
-    { name: 'Scotiabank TT', offer: 'Vehicle loans', rate: '6.5–8.5%', phone: '+1 (868) 627-9100', website: 'scotiabank.com/tt', logo: 'https://logo.clearbit.com/scotiabank.com' },
+    { name: 'Republic Bank', offer: 'New & used car loans', rate: '7–9%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com', whatsapp: '18686237219', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a car loan. I\'d like to know more about your auto financing options. My score: ' },
+    { name: 'First Citizens Bank', offer: 'Auto financing', rate: '7.5–9.5%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt', whatsapp: '18686243244', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a car loan. I\'d like to know more about your auto financing options. My score: ' },
+    { name: 'Scotiabank TT', offer: 'Vehicle loans', rate: '6.5–8.5%', phone: '+1 (868) 627-9100', website: 'scotiabank.com/tt', logo: 'https://logo.clearbit.com/scotiabank.com', whatsapp: '18686279100', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a car loan. I\'d like to know more about your vehicle loan options. My score: ' },
   ],
   Education: [
-    { name: 'First Citizens Bank', offer: 'Education loans for locals', rate: '5–7%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
-    { name: 'Government GATE Programme', offer: 'Government Assistance for Tuition Expenses', rate: '3–5%', phone: '+1 (868) 627-0094', website: 'gate.gov.tt', logo: 'https://logo.clearbit.com/gate.gov.tt' },
-    { name: 'Caribbean Union Bank', offer: 'Student loans & education financing', rate: '6–8%', phone: '+1 (868) 623-6441', website: 'caribbeanunionbank.com', logo: 'https://logo.clearbit.com/caribbeanunionbank.com' },
+    { name: 'First Citizens Bank', offer: 'Education loans for locals', rate: '5–7%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt', whatsapp: '18686243244', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for an education loan. I\'d like to know more about your education financing options. My score: ' },
+    { name: 'Government GATE Programme', offer: 'Government Assistance for Tuition Expenses', rate: '3–5%', phone: '+1 (868) 627-0094', website: 'gate.gov.tt', logo: 'https://logo.clearbit.com/gate.gov.tt', whatsapp: '18686270094', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for an education loan. I\'d like to learn more about the GATE programme. My score: ' },
+    { name: 'Caribbean Union Bank', offer: 'Student loans & education financing', rate: '6–8%', phone: '+1 (868) 623-6441', website: 'caribbeanunionbank.com', logo: 'https://logo.clearbit.com/caribbeanunionbank.com', whatsapp: '18686236441', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for an education loan. I\'d like to know more about your student loan options. My score: ' },
   ],
   Vacation: [
-    { name: 'First Citizens Bank', offer: 'Personal loans for travel', rate: '8–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
-    { name: 'JMMB Bank', offer: 'Travel financing personal loans', rate: '9–12%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
-    { name: 'Republic Bank', offer: 'Personal loans for leisure', rate: '8–11%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com' },
+    { name: 'First Citizens Bank', offer: 'Personal loans for travel', rate: '8–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt', whatsapp: '18686243244', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a travel loan. I\'d like to know more about your personal loan options for travel. My score: ' },
+    { name: 'JMMB Bank', offer: 'Travel financing personal loans', rate: '9–12%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com', whatsapp: '18686279100', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a travel loan. I\'d like to know more about your travel financing options. My score: ' },
+    { name: 'Republic Bank', offer: 'Personal loans for leisure', rate: '8–11%', phone: '+1 (868) 623-7219', website: 'republictt.com', logo: 'https://logo.clearbit.com/republictt.com', whatsapp: '18686237219', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a travel loan. I\'d like to know more about your personal loan options. My score: ' },
   ],
   Business: [
-    { name: 'JMMB Business Banking', offer: 'SME loans, working capital, equipment financing', rate: '8–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
-    { name: 'First Citizens SME Division', offer: 'Small business loans & start-up financing', rate: '7–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
-    { name: 'Caribbean Development Bank (CDB)', offer: 'Development finance for businesses & NGOs', rate: '5–9%', phone: '+1 (246) 539-1600', website: 'caribank.org', logo: 'https://logo.clearbit.com/caribank.org' },
+    { name: 'JMMB Business Banking', offer: 'SME loans, working capital, equipment financing', rate: '8–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com', whatsapp: '18686279100', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a business loan. I\'d like to know more about your SME banking and loan products. My score: ' },
+    { name: 'First Citizens SME Division', offer: 'Small business loans & start-up financing', rate: '7–12%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt', whatsapp: '18686243244', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a business loan. I\'d like to know more about your SME and start-up financing options. My score: ' },
+    { name: 'Caribbean Development Bank (CDB)', offer: 'Development finance for businesses & NGOs', rate: '5–9%', phone: '+1 (246) 539-1600', website: 'caribank.org', logo: 'https://logo.clearbit.com/caribank.org', whatsapp: '12465391600', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a business loan. I\'d like to know more about your development finance products. My score: ' },
   ],
   Personal: [
-    { name: 'JMMB Bank', offer: 'Personal loans & credit lines', rate: '10–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com' },
-    { name: 'Metro Certified Investments', offer: 'Quick personal loans', rate: '9–13%', phone: '+1 (868) 627-8900', website: 'metro.tt', logo: 'https://logo.clearbit.com/metro.tt' },
-    { name: 'First Citizens Bank', offer: 'Personal loan products', rate: '8–14%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt' },
+    { name: 'JMMB Bank', offer: 'Personal loans & credit lines', rate: '10–14%', phone: '+1 (868) 627-9100', website: 'jmmb.com', logo: 'https://logo.clearbit.com/jmmb.com', whatsapp: '18686279100', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a personal loan. I\'d like to know more about your personal loan products. My score: ' },
+    { name: 'Metro Certified Investments', offer: 'Quick personal loans', rate: '9–13%', phone: '+1 (868) 627-8900', website: 'metro.tt', logo: 'https://logo.clearbit.com/metro.tt', whatsapp: '18686278900', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a personal loan. I\'d like to know more about your quick personal loan options. My score: ' },
+    { name: 'First Citizens Bank', offer: 'Personal loan products', rate: '8–14%', phone: '+1 (868) 624-3244', website: 'firstcitizens.tt', logo: 'https://logo.clearbit.com/firstcitizens.tt', whatsapp: '18686243244', message: 'Hi, I completed a Lifeguage prequalification and got a loan eligibility score for a personal loan. I\'d like to know more about your personal loan products. My score: ' },
   ],
 };
 
@@ -89,7 +89,7 @@ const RATE_RANGES: Record<string, string> = {
   Personal: '8–14%',
 };
 
-function ProviderModal({ productId, productName, onClose }: { productId: string; productName: string; onClose: () => void }) {
+function ProviderModal({ productId, productName, onClose, score }: { productId: string; productName: string; onClose: () => void; score: number }) {
   const providers = PROVIDERS[productId] || [];
   const typeMap: Record<string, string> = {
     '🏠 Home': 'Home', '🚗 Car': 'Car', '🎓 Education': 'Education',
@@ -141,7 +141,16 @@ function ProviderModal({ productId, productName, onClose }: { productId: string;
                     <p className="text-xs text-slate-600">{p.offer}</p>
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <a
+                    href={`https://wa.me/${p.whatsapp}?text=${encodeURIComponent(p.message + score)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-medium bg-green-50 text-green-700 px-3 py-1.5 rounded-lg hover:bg-green-100 transition-colors"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    Chat on WhatsApp
+                  </a>
                   <a href={`tel:${p.phone}`} className="flex items-center gap-1 text-xs text-slate-500 hover:text-indigo-600 transition-colors">
                     <Phone className="w-3 h-3" /> {p.phone}
                   </a>
@@ -210,6 +219,7 @@ export default function ResultsPage() {
             productId={modal.productId}
             productName={modal.productName}
             onClose={() => setModal(null)}
+            score={r.overall_score}
           />
         )}
       </AnimatePresence>
